@@ -1,0 +1,60 @@
+import React from "react";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { Tabs } from "expo-router";
+import "leaflet/dist/leaflet.css";
+
+export default function TabsLayout() {
+  return (
+    <Tabs
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color }) => {
+          let iconName: React.ComponentProps<typeof Ionicons>["name"] =
+            "home-outline";
+
+          if (route.name === "home") iconName = "home-outline";
+          else if (route.name === "explore") iconName = "search-outline";
+          else if (route.name === "chat") iconName = "chatbubble-outline";
+          else if (route.name === "notifications")
+            iconName = "notifications-outline";
+          else if (route.name === "profile") iconName = "person-outline";
+          else if (route.name === "map") iconName = "globe-outline";
+
+          return <Ionicons name={iconName} size={25} color={color} />; // ✅ bigger icon
+        },
+        tabBarActiveTintColor: "#439D25",
+        tabBarInactiveTintColor: "gray",
+        tabBarStyle: {
+          height: 72, // ✅ taller tab bar
+          paddingBottom: 8,
+          paddingTop: 8,
+          paddingHorizontal: 20,
+          justifyContent: "space-around",
+          alignItems: "center",
+          backgroundColor: "white",
+          paddingVertical: 10,
+          marginHorizontal: 18,
+          marginVertical: 12,
+          borderRadius: 40,
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.1,
+          shadowRadius: 4,
+          elevation: 3,
+        },
+        tabBarLabelStyle: {
+          fontSize: 9.76, // ✅ slightly bigger label
+          fontWeight: "600",
+        },
+        headerShown: false,
+      })}
+    >
+      
+      <Tabs.Screen name="home" options={{ title: "Home" }} />
+      <Tabs.Screen name="chat" options={{ title: "Chat" }} />
+      <Tabs.Screen name="explore" options={{ title: "Explore" }} />
+      <Tabs.Screen name="profile" options={{ title: "Profile" }} />
+      <Tabs.Screen name="notifications" options={{ title: "Notification" }} />
+      <Tabs.Screen name="map" options={{ title: "Map" }} />
+    </Tabs>
+  );
+}
