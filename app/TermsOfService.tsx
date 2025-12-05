@@ -159,38 +159,66 @@ const TermsOfService = () => {
         {"\n"}• Tax invoices are issued by GO Pickup on behalf of the Pilot.
       </Text>
 
-      <Text style={styles.sectionTitle}>8. REVIEWS AND RATING</Text>
+      <Text style={styles.sectionTitle}>11. REVIEWS AND RATING</Text>
       <Text style={styles.text}>
         Senders may rate Pilots as Good, Neutral, or Bad. These reviews affect a
         Pilot’s visibility and credibility on the platform. GO Pickup reserves
         the right to moderate reviews as per its Review Policy.
       </Text>
 
-      <Text style={styles.sectionTitle}>
-        9. License and Intellectual Property
+      <Text style={styles.sectionTitle}>12. GRANT OF LICENSE</Text>
+      <Text style={styles.text}>
+        The Platform and its entire contents, features, and funtionality
+        (including but not limited to all information, software, text, displays, 
+        images, video and audio, and the design, selection, and arrangement thereof), 
+        are owned by us, our license or other providers of such material and are 
+        protected under Nigeria copyright, trademark, patent, trade secret, and other Intellectual
+        property or proprietary rights laws.
       </Text>
       <Text style={styles.text}>
-        The platform and its contents are owned by GO Pickup and are protected
-        under Nigerian law. Users are granted a limited, non-transferable right
-        to use the platform. You must not reproduce, reverse-engineer, or
-        redistribute any part of it without permission.
+        These Terms permits you to use the Platform for your personal use only.
+        You must not reproduce, decompile, reverse engineer, distribute, modify, create derivative 
+        works of, publicly display, republish, download, store or transmit any of the material on our Platform,
+        without our written permission and/or the express,  authorized written 
+        permission of the intellectual property right owner.
       </Text>
 
-      <Text style={styles.sectionTitle}>10. Non-Solicitation</Text>
+
+      <Text style={styles.sectionTitle}>13. NON-SOLICITATION</Text>
       <Text style={styles.text}>
-        Pilots may not bypass the platform to work directly with Senders for 12
-        months after introduction.
+        {"\n"}• Pilot must not bypass the platform to work directly 
+        with Senders for 12 months after introduction.
       </Text>
 
-      <Text style={styles.sectionTitle}>11. Disclaimers and Limitations</Text>
+      <Text style={styles.sectionTitle}>14. USER CONTENT AND THIRD-PARTY LINKS</Text>
       <Text style={styles.text}>
-        GO Pickup provides the platform “as is” and disclaims liability for
-        indirect or consequential damages. Liability is limited to the most
-        recent commission fee earned. GO Pickup is not liable for external
-        events, user actions, or force majeure.
+        {"\n"}• User content remains your responsibility.
+        {"\n"}• GO Pickup is not liable for third-party site content.
       </Text>
 
-      <Text style={styles.sectionTitle}>12. Indemnity</Text>
+      <Text style={styles.sectionTitle}>15. INTELLECTUAL PROPERTY</Text>
+      <Text style={styles.text}>
+        {"\n"}• GO Pickup owns all intellectual propety on the platform.
+        {"\n"}• Users are granted limited, non-tranfarable rights to use the platform.
+      </Text>
+
+      <Text style={styles.sectionTitle}>16. GENERAL DISCLAIMER  </Text>
+      <Text style={styles.text}>
+        GO Pickup:
+        {"\n"}•provides the platform “as is”.
+        {"\n"}•Disclaims liability for indirect or consequential damages. 
+        {"\n"}•is not liable for user condut, or third-party content.
+      </Text>
+
+      <Text style={styles.sectionTitle}>17. GENERAL Disclaimers  </Text>
+      <Text style={styles.text}>
+        GO Pickup:
+        {"\n"}•provides the platform “as is”.
+        {"\n"}•Disclaims liability for indirect or consequential damages. 
+        {"\n"}•is not liable for user condut, or third-party content.
+      </Text>
+
+      <Text style={styles.sectionTitle}>18. Indemnity</Text>
       <Text style={styles.text}>
         Pilots indemnify GO Pickup against any claims arising from their actions
         or omissions, except where GO Pickup is directly at fault.
