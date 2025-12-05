@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useRouter } from "expo-router";
 import {
   StatusBar,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 export default function Login() {
+  const router = useRouter();
   return (
     <View
       style={{
@@ -62,6 +63,10 @@ export default function Login() {
         </View>
         <View style={{ justifyContent: "center", alignItems: "flex-end" }}>
           <TouchableOpacity
+          onPress={() => {
+            router.push("../TermsOfService");
+          }}
+          
           style={{
             marginTop: 30,
             justifyContent: "center",

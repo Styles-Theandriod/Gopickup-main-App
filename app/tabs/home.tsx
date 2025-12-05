@@ -13,10 +13,10 @@ import {
   View,
 } from "react-native";
 
-import BuyMaterialContent from '@/components/BuyMaterialContent'
-import NaturalResourcesContent from '@/components/NaturalResourcesContent'
-import PostRequestContent from '@/components/PostRequestContent'
-import TrackDeliveryContent from '@/components/TrackDeliveryContent'
+import BuyMaterialContent from '@/components/BuyMaterialContent';
+import NaturalResourcesContent from '@/components/NaturalResourcesContent';
+import PostRequestContent from '@/components/PostRequestContent';
+import TrackDeliveryContent from '@/components/TrackDeliveryContent';
 
 export default function Home() {
   const [selected, setSelected] = useState("Buy Material");
@@ -26,7 +26,7 @@ export default function Home() {
   const tabs = [
     "Buy Material",
     "Natural Resources",
-    "Post a Request",
+    "Post a Load",
     "Track My Delivery",
   ];
   return (
@@ -39,6 +39,7 @@ export default function Home() {
           justifyContent: "space-around",
           alignItems: "center",
           paddingTop: 20,
+          marginTop:10
         }}
       >
         <Text style={{ fontSize: 30.91, fontWeight: "bold" }}>Home</Text>
@@ -98,10 +99,11 @@ export default function Home() {
             paddingHorizontal: 30,
             marginTop: 10,
             borderColor: "#439D25",
+            outlineColor:'#439D25'
           }}
           placeholder="Search"
           cursorColor={"#439D25"}
-          placeholderTextColor={"black"}
+          placeholderTextColor={"#439D25"}
         />
 
         {/* Coal Card */}
@@ -275,7 +277,7 @@ export default function Home() {
                     <Ionicons name="close" size={28} color="black" />
                   </TouchableOpacity>
 
-                  <TouchableOpacity onPress={() => setVisible(false)}>
+                  <TouchableOpacity>
                     <Image
                       source={require("../../assets/images/Settings.png")}
                       style={{ width: 30, height: 30, marginLeft: 20 }}
@@ -285,7 +287,7 @@ export default function Home() {
 
                 {activeTab === "Buy Material" && <BuyMaterialContent />}
                 {activeTab === "Natural Resources" && <NaturalResourcesContent />}
-                {activeTab === "Post a Request" && <PostRequestContent />}
+                {activeTab === "Post a Load" && <PostRequestContent />}
                 {activeTab === "Track My Delivery" && <TrackDeliveryContent />}
               </View>
             </Modal>
@@ -331,10 +333,10 @@ export default function Home() {
                 style={{ width: 38, height: 38 }}
               />
             </View>
-            <Text style={{ marginTop: 10, fontWeight: "700", fontSize: 12 }}>
+            <Text style={{ marginTop: 8, fontWeight: "700", fontSize: 11 }}>
               Our Dispatch Equipment
             </Text>
-            <Text style={{ fontWeight: "400", fontSize: 12 }}>
+            <Text style={{ fontWeight: "400", fontSize: 11 }}>
               Van, Pick Up, Truck, Flat bed, Trailer and Tipper.
             </Text>
           </TouchableOpacity>
@@ -442,7 +444,9 @@ const styles = StyleSheet.create({
     width: 169,
     height: 125,
     padding: 15,
-    borderRadius: 10,
+    borderRadius: 10, 
+    borderWidth:2,
+    borderColor:'#439D25'
   },
   vendorCard: {
     width: "100%",

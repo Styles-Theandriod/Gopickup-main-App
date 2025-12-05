@@ -14,10 +14,6 @@ import {
 export default function Login() {
   const router = useRouter();
   
-
-  
-
-  
   return (
     <View
       style={{
@@ -131,9 +127,7 @@ export default function Login() {
               </TouchableOpacity>
 
                 <TouchableOpacity
-                onPress={() => {
-                  router.push("/info2");
-                }}
+                onPress={() => router.push("/tabs/home")}
                 style={{
                   marginTop: 22,
                   backgroundColor: "#439D25",

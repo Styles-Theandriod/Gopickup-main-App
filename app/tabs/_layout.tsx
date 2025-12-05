@@ -22,7 +22,7 @@ export default function TabsLayout() {
           return <Ionicons name={iconName} size={25} color={color} />; // ✅ bigger icon
         },
         tabBarActiveTintColor: "#439D25",
-        tabBarInactiveTintColor: "gray",
+        tabBarInactiveTintColor: "black",
         tabBarStyle: {
           height: 72, // ✅ taller tab bar
           paddingBottom: 8,
@@ -54,7 +54,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="explore" options={{ title: "Explore" }} />
       <Tabs.Screen name="profile" options={{ title: "Profile" }} />
       <Tabs.Screen name="notifications" options={{ title: "Notification" }} />
-      <Tabs.Screen name="map" options={{ title: "Map" }} />
+      {/* <Tabs.Screen name="map" options={{ title: "Map" }} /> */}
     </Tabs>
   );
 }

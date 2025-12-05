@@ -60,6 +60,7 @@ export default function Info2() {
         }}
       >
         <TouchableOpacity
+          onPress={() => router.push("/tabs/home")}
           style={{
             borderColor: "#00000026",
             width: 91,
