@@ -328,7 +328,7 @@ const TermsOfService = () => {
         justifyContent: "center",
         width:'50%',
       }}
-        onPress={() => router.push("/tabs/home")}
+        onPress={() => router.push("/info")}
       >
         <Text style={{color:'white', fontSize:15}}>Continue</Text>
       </TouchableOpacity>
