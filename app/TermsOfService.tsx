@@ -1,8 +1,12 @@
 // TermsOfServiceScreen.js
-import React from "react";
-import { Linking, ScrollView, StyleSheet, Text } from "react-native";
+import React, { useState } from "react";
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { useRouter } from "expo-router";
 
 const TermsOfService = () => {
+  const router = useRouter();
+  const [checked, setChecked] = useState(false);
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>TERMS OF SERVICES</Text>
@@ -210,43 +214,56 @@ const TermsOfService = () => {
         {"\n"}•is not liable for user condut, or third-party content.
       </Text>
 
-      <Text style={styles.sectionTitle}>17. GENERAL Disclaimers  </Text>
+      <Text style={styles.sectionTitle}>17. LIMITATION OF LIABILITY  </Text>
       <Text style={styles.text}>
-        GO Pickup:
-        {"\n"}•provides the platform “as is”.
-        {"\n"}•Disclaims liability for indirect or consequential damages. 
-        {"\n"}•is not liable for user condut, or third-party content.
+        {"\n"}•Liability is limited to the most resent commission fee earned.
+        {"\n"}•GO Pickup is not-liable for lossess due to external events or force majeure. 
+        {"\n"}•Legal proceedings can only commence after good-faith mediation efforts.
       </Text>
 
-      <Text style={styles.sectionTitle}>18. Indemnity</Text>
+      <Text style={styles.sectionTitle}>18. INDEMNITY</Text>
       <Text style={styles.text}>
         Pilots indemnify GO Pickup against any claims arising from their actions
         or omissions, except where GO Pickup is directly at fault.
       </Text>
 
-      <Text style={styles.sectionTitle}>13. Dispute Resolution</Text>
+      <Text style={styles.sectionTitle}>19. DISPUTE RESOLUTION</Text>
       <Text style={styles.text}>
-        Disputes must be reported within 72 hours of delivery. GO Pickup may
-        mediate and temporarily freeze accounts pending resolution. Legal action
-        can only proceed after good-faith mediation.
+        {"\n"}• Disputes must be reported within 72 hours of delivery. 
+        {"\n"}• GO Pickup may mediate and freeze accounts pending resolution. 
+        {"\n"}• Legal proceedings can only commence after good-faith mediation effors.
       </Text>
 
-      <Text style={styles.sectionTitle}>14. Termination</Text>
+      <Text style={styles.sectionTitle}>20. TERMINATION</Text>
       <Text style={styles.text}>
-        Users may terminate their account by giving two weeks’ notice. GO Pickup
-        may suspend or terminate accounts for breach, inactivity, or at its
+        {"\n"}• Users may terminate by giving 2 weeks’ notice. 
+        {"\n"}• GO Pickup may terminate accounts for breaches, inactivity, or at its
         discretion.
       </Text>
 
-      <Text style={styles.sectionTitle}>15. Governing Law</Text>
+      <Text style={styles.sectionTitle}>21. JURISDICTION AND VENUE</Text>
       <Text style={styles.text}>
-        These Terms are governed by Nigerian law, with exclusive jurisdiction in
-        the courts of Abuja.
+        Disputes shall be resolved exclusively in the courts of Abuja Nigeria.
       </Text>
 
-      <Text style={styles.sectionTitle}>16. Contact Information</Text>
+      <Text style={styles.sectionTitle}>22. GOVERNING LAW</Text>
       <Text style={styles.text}>
-        For inquiries, contact GO Pickup at:
+        These Terms are governed by Nigerian law, with jurisdiction in Abuja.
+      </Text>
+
+      <Text style={styles.sectionTitle}>23. SEVERABILITY</Text>
+      <Text style={styles.text}>
+        if any part of the Terms is found unforceable, the rest remains valid.
+      </Text>
+
+      <Text style={styles.sectionTitle}>24. WAIVER</Text>
+      <Text style={styles.text}>
+        No waiver is valid ulesss in writing.
+      </Text>
+
+      <Text style={styles.sectionTitle}>25. CONTACT INFORMATION</Text>
+      <Text style={styles.text}>
+        You may reach GO Pickup at:
         {"\n"}Email:{" "}
         <Text
           style={styles.link}
@@ -256,7 +273,66 @@ const TermsOfService = () => {
         </Text>
       </Text>
 
+      <Text style={styles.sectionTitle}>26. ASSIGNMENT</Text>
+      <Text style={styles.text}>
+        {"\n"}• GO Pickup may assign its right to affiliates or successors. 
+        {"\n"}• Pilots must obtain written consent before assigning thier rights. 
+      </Text>
+
+      <Text style={styles.sectionTitle}>27. SUBCONTRACTORS</Text>
+      <Text style={styles.text}>
+        {"\n"}• Subcontractors must register independently and be verified. 
+        {"\n"}• Pilots remain fully liable for Subcontractor actions. 
+      </Text>
       
+      <View
+      style={{
+        flexDirection: "row",
+        alignItems: "center",
+        marginVertical: 10,
+        marginTop:20
+      }}
+    >
+      {/* Checkbox */}
+      <Pressable
+        onPress={() => setChecked(!checked)}
+        style={{
+          height: 20,
+          width: 20,
+          borderWidth: 2,
+          borderColor: "#333",
+          borderRadius: 4,
+          justifyContent: "center",
+          alignItems: "center",
+          marginRight: 10,
+        }}
+      >
+        {checked && (
+          <Text style={{ fontSize: 16, fontWeight: "bold" }}>✓</Text>
+        )}
+      </Pressable>
+
+      {/* Text */}
+      <Text style={{ fontSize: 10 }}>
+        I have read and agree to the <Text style={{ fontWeight: "bold" }}>Terms of Service</Text>
+      </Text>
+    </View>      
+
+        
+    <View style={{ height: 40,marginVertical: 15,  flexDirection:'row', justifyContent:"flex-end", alignItems:'center' }} >
+      <TouchableOpacity style={{
+        backgroundColor: "#439D25",
+        paddingVertical: 20,
+        borderRadius: 100,
+        alignItems: "center",
+        justifyContent: "center",
+        width:'50%',
+      }}
+        onPress={() => router.push("/tabs/home")}
+      >
+        <Text style={{color:'white', fontSize:15}}>Continue</Text>
+      </TouchableOpacity>
+    </View>
     </ScrollView>
   );
 };
@@ -298,6 +374,16 @@ const styles = StyleSheet.create({
   link: {
     color: "#007BFF",
     textDecorationLine: "underline",
+  },
+  checkboxContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  checkboxLabel: {
+    marginLeft: 8,
+    fontSize: 15,
+    color: "#444",
   },
 });
 

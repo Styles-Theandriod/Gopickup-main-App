@@ -1,3 +1,4 @@
+import React from "react";
 import GoogleLogInButton from "@/components/GoogleLogInButton";
 import { useRouter } from "expo-router";
 import { useState } from "react";
